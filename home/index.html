@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discord Presence Card</title>
+  <link rel="stylesheet" href="/_static/css/web-o2ht1rPGaGf3ZnNJ4UbfbwGs.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="icon" type="image/png" href="/_static/images/icon.png"/>
+</head>
+<body>
+  <div id="particles"></div>
+  <div class="main-wrapper">
+    <div class="card-container">
+      <div class="card">
+        <div class="avatar-container" id="avatarContainer">
+          <img id="avatar" src="" alt="User avatar">
+          <img id="avatar-decoration" src="" alt="Avatar decoration" style="display:none; position:absolute; inset:0; border-radius:50%;">
+          <div id="statusCircle"></div>
+        </div>
+        <div id="username" style="text-align:center; font-weight:600; font-size:1.2rem;"></div>
+        <div id="handle"></div>
+        <div id="platformIcons"></div>
+        <div id="activityStatus"></div>
+        <div class="card-buttons" style="text-align:center; margin-top:1rem; display:flex; justify-content:center; gap:10px;">
+      <button id="skillsBtn" class="card-btn">Skills</button>
+      <button id="projectsBtn" class="card-btn">Projects</button>
+      </div>
+      </div>
+    </div>
+
+    <div class="music-container">
+      <div class="music-card">
+        <img class="music-album" id="albumArt" src="https://via.placeholder.com/120" alt="Album Cover">
+        <div class="music-info">
+          <div class="music-title" id="songTitle">Song Title</div>
+          <div class="music-artist" id="songArtist">Artist Name</div>
+          <div class="music-visualizer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="music-progress-container">
+            <div class="music-progress" id="musicProgress"></div>
+          </div>
+          <div class="music-minutes-left" id="minutesLeft">0:00 left</div>
+        </div>
+        <div class="music-controls">
+          <button id="prevBtn">⏮</button>
+          <button id="playPauseBtn">▶️</button>
+          <button id="nextBtn">⏭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="skillsOverlay" class="skills-overlay">
+    <div class="skills-content">
+      <button id="closeSkillsBtn" class="close-btn">⬅ Back</button>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><i class="fab fa-html5 fa-2x"></i><span>HTML</span></div>
+        <div class="skill-item"><i class="fab fa-css3-alt fa-2x"></i><span>CSS</span></div>
+        <div class="skill-item"><i class="fab fa-js-square fa-2x"></i><span>JavaScript</span></div>
+        <div class="skill-item"><i class="fab fa-react fa-2x"></i><span>React</span></div>
+        <div class="skill-item"><i class="fab fa-node-js fa-2x"></i><span>Node.js</span></div>
+        <div class="skill-item"><i class="fab fa-bootstrap fa-2x"></i><span>Tailwind</span></div>
+        <div class="skill-item"><i class="fab fa-git-alt fa-2x"></i><span>Git</span></div>
+        <div class="skill-item"><i class="fab fa-figma fa-2x"></i><span>Figma</span></div>
+      </div>
+    </div>
+  </div>
+<div id="projectsOverlay" class="skills-overlay">
+  <div class="skills-content">
+    <button id="closeProjectsBtn" class="close-btn">⬅ Back</button>
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      
+      <div class="project-item">
+        <img src="https://media.discordapp.net/attachments/1395283504035795034/1399151137440923729/DC_BANNER.png?ex=68bc07ca&is=68bab64a&hm=a9378b2e5c0885c5ad9303ccef0f0d7e96fae6773e242330e475543d891c6123&=&format=webp&quality=lossless&width=1728&height=972" alt="flrp">
+        <h4>Flawless RP <span class="project-badge soon">Coming Soon</span></h4>
+        <p>The best Semi-Serious FiveM Server with fully custom scripts.</p>
+        <a href="#">View Project</a>
+      </div>
+      
+      <div class="project-item">
+        <img src="https://cdn.discordapp.com/avatars/1412939589743808624/b0adc2b0bf4a64726b8eb70d9c5a64af.webp?size=1024" alt="fragment">
+        <h4>Fragment <span class="project-badge soon">Coming Soon</span></h4>
+        <p>A discord security bot that focuses on protecting server raids and mass channel deletion.</p>
+        <a href="#">View Project</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  const skillsBtn = document.getElementById('skillsBtn');
+  const skillsOverlay = document.getElementById('skillsOverlay');
+  const closeSkillsBtn = document.getElementById('closeSkillsBtn');
+
+  skillsBtn.addEventListener('click', () => {
+    skillsOverlay.classList.add('active');
+  });
+
+  closeSkillsBtn.addEventListener('click', () => {
+    skillsOverlay.classList.remove('active');
+  });
+  const projectsBtn = document.getElementById('projectsBtn');
+  const projectsOverlay = document.getElementById('projectsOverlay');
+  const closeProjectsBtn = document.getElementById('closeProjectsBtn');
+
+  projectsBtn.addEventListener('click', () => {
+    projectsOverlay.classList.add('active');
+  });
+
+  closeProjectsBtn.addEventListener('click', () => {
+    projectsOverlay.classList.remove('active');
+  });
+</script>
+  <script src="/_static/js/web-UlCebNzNINUF9yuBI3KJ7uNw.js"></script>
+  <script src="/_static/js/web-TaYklU9yNQaW2ebtNldiFfR8.js" defer></script>
+</body>
+</html>
